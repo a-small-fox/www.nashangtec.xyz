@@ -2,14 +2,9 @@
 layout: default
 ---
 
-<!-- Image to hack wechat -->
-<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
-<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
-
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
-        /*background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')*/
         height: 500px;
         overflow: hidden;
     }
@@ -18,7 +13,7 @@ layout: default
         height: 100%;
         border: 0;
     }
-    /* Override Nav Style */
+    
     {% if page.navcolor == "invert" %}
         .navbar-custom .nav li a,
         .navbar-custom .nav li a:hover,
