@@ -16,7 +16,7 @@ list: [
 ]
 company: 'Nashang Technology'
 catalog: true
-
+analytics: true
 # category: test1
 ---
 

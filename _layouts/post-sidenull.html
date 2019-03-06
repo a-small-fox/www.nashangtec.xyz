@@ -149,6 +149,17 @@ layout: default
         anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })
 </script>
+
+<!-- 添加GA统计 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135682637-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-135682637-1');
+</script>
+
 <style>
     /* place left on bigger screen */
     @media all and (min-width: 800px) {

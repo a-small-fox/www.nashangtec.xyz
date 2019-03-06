@@ -31,7 +31,9 @@ jianshu_username:   nashangtec
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 
 # 设置文章类别
-permalink: /:categories/:year/:month/:day/:title:output_ext
+# permalink: /:categories/:year/:month/:day/:title:output_ext
+# permalink: /:title:output_ext
+permalink: /:categories/:title:output_ext
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
@@ -67,11 +69,11 @@ gitalk:
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: b50bf2b12b5338a1845e33832976fd68
+# ba_track_id: b50bf2b12b5338a1845e33832976fd68
 
 # Google Analytics
-ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-ga_domain: qiubaiying.top               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+ga_track_id: 'UA-135682637-1'            # Format: UA-xxxxxx-xx
+ga_domain: nashangtec.xyz                # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 # Featured Tags
 featured-tags: true                     # 是否使用首页标签

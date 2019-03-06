@@ -6,6 +6,15 @@
 <body ontouchstart="">
     {{ content }}
     <img src="/img/apple-touch-icon.png" width="0" height="0" />
+    <!-- 添加GA统计 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135682637-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-135682637-1');
+    </script>
 </body>
 
 </html>
