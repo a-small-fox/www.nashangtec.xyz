@@ -13,6 +13,7 @@ list: [
         type: 'Phone',
         info: '+86 13810346005'
     },
+    
 ]
 company: 'Nashang Technology'
 catalog: true
@@ -20,4 +21,4 @@ analytics: true
 # category: test1
 ---
 
-![](https://cdn.mos.cms.futurecdn.net/RdxhPVv8fAyM6oHsRgF6dH-650-80.png)
+<!-- ![](https://cdn.mos.cms.futurecdn.net/RdxhPVv8fAyM6oHsRgF6dH-650-80.png) -->
