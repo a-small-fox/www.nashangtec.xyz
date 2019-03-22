@@ -1,0 +1,134 @@
+---
+layout: default
+---
+
+<div class="container">
+    <h1 class="header">HELP</h1>
+    {% for item in page.dataSource %}
+    <div >
+        <div class="faqHeader">{{item.title}}</div>
+        {% for citem in item.content %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <span class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">{{citem.question}}</span>
+                </h4>
+            </div>
+            <div class="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    {{citem.answer}}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% if item.islast == true %}
+        <div class="panel panel-default" >
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <span class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Cancelling a Subscription</span>
+                </h4>
+            </div>
+            <div class="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                        You can turn off the auto-renew for the subscription whenever you want to through iTunes. Please visit 
+                        <a href="http://support.apple.com/kb/ht4098"> http://support.apple.com/kb/ht4098 </a>
+                        for details. When your current trial/subscription period expires, you will be unsubscribed. The current active subscription period cannot be canceled. After your subscription expires, you will no longer eligible for Premium features.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <span class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Additional Subscription Information</span>
+                </h4>
+            </div>
+            <div class="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    Payment will be charged to your iTunes account at confirmation of purchase. Your subscription will automatically renew unless auto-renew is turned off at least 24-hours before the end of the current period. Your account will charged for renewal within 24-hours prior to the end of the current period and the cost will be identified. Subscriptions may be managed by the user and auto-renewal may be turned off by going to the user's Account Settings after purchase.
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+    <div class="other">
+        If you  have more questions or comments, please feel free to contact us at  
+        <a href="#other">livewallpaper_support@conew.com</a>
+        .
+    </div>
+</div>
+<script>
+    $(function(){
+        $('.collapseOne').hide();
+        $('.collapseOne').eq(0).show();
+        $('.panel-title span').addClass('collapsed');
+        $('.panel-title span').eq(0).removeClass('collapsed')
+
+        $(".panel-heading").click(function(){
+            let _index = $(".panel-heading").index(this);
+            if($('.collapseOne').eq(_index).is(':visible')){
+                $('.collapseOne').eq(_index).hide();
+                $('.panel-title span').eq(_index).addClass('collapsed')
+            }else{
+                $('.collapseOne').eq(_index).show();
+                $('.panel-title span').eq(_index).removeClass('collapsed')
+            }
+        })
+        
+    });
+</script>
+
+<style>
+    .container{
+        padding: 0 30px;
+    }
+    .header{
+        font-size: 30px;
+        text-align: center;
+        margin: 40px 0 30px 0;
+    }
+    .faqHeader {
+        font-size: 16px;
+        margin: 20px 0;
+    }
+    .panel-body{
+        font-size: 12px;
+    }
+    .panel-title >span{
+        font-size: 12px;
+    }
+    .other{
+        margin-bottom: 40px;
+        font-size: 12px;
+    }
+    .other > a{
+        color: #0085a1;
+        text-decoration: underline;
+    }
+    .panel-body > a{
+        color: #0085a1;
+        text-decoration: underline;
+    }
+    .panel-heading [data-toggle="collapse"]:after {
+        font-family: 'Glyphicons Halflings';
+        /* content: "\e072"; */
+        content: "";
+        width: 0;
+        height:0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 12px solid #F58723;
+        float: right;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .panel-heading [data-toggle="collapse"].collapsed:after {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+        border-bottom: 12px solid #454444;
+    }
+</style>
